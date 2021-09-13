@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        :root{
+            --edge-padding: 300px;
+            --prime-color: #092A33;
+            --color: #ddf8ff;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: roboto;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #eee;
+        }
+        #header{
+            background-color: var(--prime-color);
+            overflow: auto;
+            padding: 20px var(--edge-padding);
+        }
+        .section1{
+            float: left;
+        }
+        .section1 ul li{
+            float: left;
+            list-style-type: none;
+            padding: 0 10px;
+            /* border-right: 1px solid white; */
+            margin-top: 8px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        /* .section1 ul li:last-child{
+            border: none;
+        } */
+        .section2{
+            float: right;
+        }
+        .section2 input{
+            border: none;
+            padding: 5px 10px;
+            border-radius: 15px;
+            height: 32px;
+        }
+        .section2 button{
+            height: 32px;
+            width: 40px;
+            border: none;
+            outline: none;
+            background-color: white;
+            margin-left: -16px;
+            border-radius: 0 15px 15px 0;
+        }
+        .section2 button i{
+            background-color: var(--prime-color);
+            color: whitesmoke;
+            padding: 5px;
+            border-radius: 50%;
+        }
+        .section3{
+            float: left;
+        }
+        .section3 h1{
+            text-transform: uppercase;
+            color: var(--prime-color);
+            font-size: 40px;
+        }
+        .section3 p{
+             color: #3a3a3a;
+        }
+        .section4{
+            float: right;
+        }
+        .section4 ul li {
+            float: left;
+            list-style-type: none;
+            margin-left: 20px;
+            margin-top: 10px;
+            background-color: var(--prime-color);
+            padding: 10px;
+            text-align: center;
+            line-height: 20px;
+            width: 40px;
+            border-radius: 50%;
+            transition: 300ms;
+        }
+        .section4 ul li:hover{
+            background-color: #000;
+        }
+        #menu{
+            overflow: auto;
+            padding: 30px var(--edge-padding);
+
+        }
+        #nav-container{
+            margin: 0 var(--edge-padding) 20px var(--edge-padding);
+        }
+        #nav{
+            background-color: var(--prime-color);
+            /* background-image: url(https://c4.wallpaperflare.com/wallpaper/109/664/851/black-texture-wallpaper-thumb.jpg); */
+            overflow: auto;
+            padding: 20px;
+        }
+        #nav ul li{
+            margin: 0 20px;
+            display:  inline-block;
+        }
+        #nav ul{
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        #nav ul li a{
+            text-transform: uppercase;
+            transition: 300ms;
+        }
+        #nav ul li a:hover{
+            border-bottom: 1px solid white;
+        }
+        #banner{
+            padding: 0 var(--edge-padding);
+        }
+        #banner img{
+            width: 100%;
+            height: 60vh;
+            border:  4px solid white;
+            box-shadow: 0px 0px 5px silver;
+            border-radius: 3px;
+        }
+        #programmer{
+            margin: 50px var(--edge-padding);
+            overflow: auto;
+            background: var(--prime-color);
+            clear: both;
+        }
+        .section5{
+            float: left;
+
+        }
+        .section6{
+            float: left;
+            width: 60%;
+            margin: 50px 0 0 30px;
+
+        }
+        .section6 h1{
+            color: #eee;
+            font-size: 5em;
+            margin-bottom: 20px;
+            font-family: none;
+            font-weight: normal;
+        }
+        .section6 p{
+            font-size: 18px;
+            color: silver;
+            font-family: segoe ui;
+            margin-bottom: 25px;
+        }
+        .section7{
+            float: right;
+        }
+        .section7 a {
+            color: var(--color);
+
+        }
+        #about-section{
+            background-color: whitesmoke;
+            overflow: auto;
+            margin: 50px var(--edge-padding);
+            padding: 50px;
+            /* padding: 50px var(--edge-padding); */
+        }
+        #content-a h1,#content-b h1,#content-c h1{
+            font-weight: normal;
+            color: var(--prime-color);
+        }
+        #content-a p,#content-b p,#content-c p{
+            font-family: arial;
+            color: #555555;
+            font-size: 15px;
+            line-height: 22px;
+        }
+        #content-a a,#content-b a,#content-c a{
+            color: var(--prime-color);
+            font-weight: bold;
+            float: right;
+        }
+        #content-a{
+            float: left;
+            width: 30%;
+        }
+        #content-a img{
+            width: 100%;
+            border: 4px solid transparent;
+            box-shadow: 2px 2px 5px lightgray;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        #content-b{
+            float: left;
+            width: 30%;
+            margin: 0 5%;
+        }
+        #content-c{
+            float: left;
+            width: 30%;
+        }
+        .rivew i span{
+            font-size: 40px;
+        }
+        #footer{
+            padding: 30px var(--edge-padding);
+            background-color: var(--prime-color);
+            overflow: auto;
+            clear: both;
+        }
+        .box1{
+            float: left;
+        }
+        .box2{
+            float: right;
+        }
+        #contact{
+            background-color: whitesmoke;
+            margin: 50px var(--edge-padding);
+            overflow: auto;
+            clear: both;
+            padding: 50px;
+        }
+        #one h2, #two h2, #three h2, #four h2{
+            font-weight: normal;
+            color: var(--prime-color);
+        }
+        hr{
+            margin: 5px 0 30px 0;
+            width: 20%;
+            height: 4px;
+            background-color: var(--prime-color);
+        }
+        #one a, #three a, #four a{
+            color: var(--prime-color);
+            font-weight: bold;
+            float: right;
+        }
+        #one p, #two p, #three p, #four p{
+            color: #555555;
+            font-size: 15px;
+            line-height: 22px;
+        }
+        #two a{
+            color: var(--prime-color);
+        }
+        #one{
+            width: 25%;
+            float: left;            
+            margin-right: 5%;
+        }
+        #one span{
+            color: brown;
+        }
+        #two{
+            width: 12%;
+            float: left;            
+            margin-right: 5%;
+        }
+        #two ul li{
+            list-style-type: none;
+            margin: 8px 0;
+        }
+        #three{
+            width: 30%;
+            float: left;
+            margin-right: 5%;
+        }
+        #four{
+            width: 18%;
+            float: left;
+        }
+        #four input, #four textarea{
+            width: 100%;
+            border: none;
+            /* background-color: var(--prime-color); */
+            background-color: #eee;
+            border: 1px solid rgb(228, 228, 228);
+            margin-bottom: 5px;
+            color: black;
+            padding: 8px 10px;
+            border-radius: 4px;
+            outline: none;
+            resize: none;
+        }
+        #four input[type = submit]{
+            background-color: var(--prime-color);
+            color: white;
+            margin: 10px 0;
+        }
+        
+        </style>
+</head>
+<body>
+    <div id="header">
+        <div class="section1">
+            <ul>
+                <li><a href="">Login</a></li>
+                <li><a href="">|</a></li>
+                <li><a href="">RSS Feeds</a></li>
+                <li><a href="">|</a></li>
+                <li><a href="">Archived News</a></li>
+            </ul>
+        </div>
+        <div class="section2">
+            <input type="search" placeholder="Search Here">
+            <button>
+                <a href="">
+                <i class="fas fa-search"></i>
+                </a>
+            </button>
+        </div>
+    </div>
+    <div id="menu">
+        <div class="section3">
+            <a href="">
+            <h1>Systematic</h1>
+            </a>
+            <p>Paid Website template</p>
+        </div>
+        <div class="section4">
+            <ul>
+                <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                <li><a href=""><i class="fab fa-telegram"></i></a></li>
+                <li><a href=""><i class="fab fa-yahoo"></i></a></li>
+                <li><a href=""><i class="fab fa-google-plus"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id = nav-container>
+        <div id="nav">
+            <ul>
+                <li><a href="">Homepage</a></li>
+                <li><a href="">style demo</a></li>
+                <li><a href="">full width</a></li>
+                <li><a href="">dropdown</a></li>
+                <li><a href="">gallery</a></li>
+                <li><a href="">portfolio</a></li>
+                <li><a href="">long link text</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="banner">
+    <img src="https://systemstic-apurbo.netlify.app/img/slider-01.jpg" alt="">
+    </div>
+    <div id="programmer">
+        <div class="section5">
+            <img src="https://systemstic-apurbo.netlify.app/img/hero.jpg" alt="">
+        </div>
+        <div class="section6">
+            <h1>LIFE OF A PROGRAMMER</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam magni doloremque cupiditate, odio praesentium nemo, aut nobis, maiores commodi dolorum quos cumque. Cupiditate hic rerum vero perspiciatis, alias totam l nulla adipisci dignissimos laudantium molestiodit 
+        </p>
+        <div class="section7">
+            <a href="">READ MORE >></a>
+        </div>
+        </div>
+    </div>
+    <div id="about-section">
+        <div id="content-a">
+            <h1>A Little About Us</h1>
+            <hr>
+            <img src="https://systemstic-apurbo.netlify.app/img/about1.jpg" alt="">
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolores reiciendis, ducimus aliquid aliquam atque. Saepe sequi alias quisquam inventore facere soluta perferendis ea commodi?
+            </p>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ad adipisci placeat ut nam asperiores?
+            </p>
+            <br>
+            <a href="">Read More About Us</a>
+        </div>
+        <div id="content-b">
+            <h1>Some of Our Services</h1>
+            <hr>
+            <table cellspacing="10px">
+                <tr>
+                    <td>
+                        <img src="https://systemstic-apurbo.netlify.app/img/Tesla.jpg" alt=""> 
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <h4>Service Name</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet,   elit. Architecto odio rem quisquam.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://systemstic-apurbo.netlify.app/img/Tesla.jpg" alt=""> 
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <h4>Service Name</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto odio rem quisquam.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://systemstic-apurbo.netlify.app/img/Tesla.jpg" alt=""> 
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <h4>Service Name</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet,   elit. Architecto odio rem quisquam.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://systemstic-apurbo.netlify.app/img/Tesla.jpg" alt=""> 
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <h4>Service Name</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto odio rem quisquam.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <a href="">View All Of Our Services</a>
+        </div>
+        <div id="content-c">
+            <h1>What Our Clients Say</h1>
+            <hr>
+            <div class="rivew">
+                <i><span>''</span>Tommy Tanker - CEO</i>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ad veniam dolor eos tempora quos facilis quidem consectetur aspernatur mollitia ea, quaerat, dignissimos illum ex.
+                </p>
+                <br>
+                <a href="">Visit This Project</a>
+                <br>
+                <br>
+            </div>
+            <div class="rivew">
+                <i><span>''</span>Tommy Init - CEO</i>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ad veniam dolor eos tempora quos facilis quidem consectetur aspernatur mollitia ea, quaerat, dignissimos illum ex.
+                </p>
+                <br>
+                <a href="">Visit This Project</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div id="one">
+            <h2>Latest Tweet</h2>
+            <hr>
+            <p><span>@Lorem_ipsum</span> dolor sit amet consectetur adipisicing elit. Itaque corporis aspernatur repellendus suscipit cupiditate esse! Rerum corporis sequi placeat maxime.</p>
+            <br>
+            <p><span>@Lorem_ipsum</span> dolor sit amet consectetur adipisicing elit. Fuga rerum dolore dignissimos itaque tempora voluptate omnis molestias labore aperiam repellendus.</p>
+        </div>
+        <div id="two">
+            <h2>Latest News</h2>
+            <hr>
+            <ul>
+                <li><i class = 'fas fa-angle-double-right'></i><a href=""> Post Link 1</a></li>
+                <li><i class = 'fas fa-angle-double-right'></i><a href=""> Post Link 2</a></li>
+                <li><i class = 'fas fa-angle-double-right'></i><a href=""> Post Link 3</a></li>
+                <li><i class = 'fas fa-angle-double-right'></i><a href=""> Post Link 4</a></li>
+                <li><i class = 'fas fa-angle-double-right'></i><a href=""> Post Link 5</a></li>
+                <li><i class = 'fas fa-angle-double-right'></i><a href=""> Post Link 6</a></li>
+                <li><i class = 'fas fa-angle-double-right'></i><a href=""> Post Link 7</a></li>
+                <li><i class = 'fas fa-angle-double-right'></i><a href=""> Post Link 8</a></li>
+                <li><i class = 'fas fa-angle-double-right'></i><a href=""> Post Link 9</a></li>
+            </ul>
+        </div>
+        <div id="three">
+            <h2>What Our Clients Say</h2>
+            <hr>
+            <div class="rivew">
+                <b>Tommy Tanker - CEO</b>
+                <br>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. facilis aspernatur mollitia ea, quaerat, dignissimos illum ex.
+                </p>
+                <br>
+                <a href="">Visit This Project</a>
+                <br>
+                <br>
+            </div>
+            <div class="rivew">
+                <b>Tommy Init - CEO</b>
+                <br>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ad veniam dolor eos tempora quos facilis quidem consectetur ax.
+                </p>
+                <br>
+                <a href="">Visit This Project</a>
+            </div>
+        </div>
+        <div id="four">
+            <h2>Contact Us</h2>
+            <hr>
+            <input type="text" placeholder='Name Here' name="" id="">
+            <input type="text" placeholder='Email Here' name="" id="">
+            <input type="text" placeholder='Subject Here' name="" id="">
+            <textarea placeholder="Your Message Here"></textarea>
+            <input type="submit" value="Send">
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="box1">
+            <a href="">Copyritht &copy; 2021 All Rights Reserved By Nobody!</a>
+        </div>
+        <div class="box2">
+            <a href="">
+                HTML/CSS Template By Ta-Seen
+            </a>
+        </div>
+    </div>
+</body>
+</html>
